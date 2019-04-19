@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Apr 2019 pada 08.45
+-- Waktu pembuatan: 20 Apr 2019 pada 01.16
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 5.6.40
 
@@ -34,7 +34,10 @@ CREATE TABLE `post` (
   `title` varchar(100) NOT NULL,
   `content` text NOT NULL,
   `category` varchar(50) NOT NULL,
-  `date` date NOT NULL
+  `date` date NOT NULL,
+  `tagline` text NOT NULL,
+  `photo` varchar(100) NOT NULL,
+  `read_time` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -45,10 +48,11 @@ CREATE TABLE `post` (
 
 CREATE TABLE `users` (
   `id_user` int(100) NOT NULL,
-  `email` varchar(20) NOT NULL,
-  `password` varchar(10) NOT NULL,
   `bio` varchar(100) NOT NULL,
-  `photo` int(10) NOT NULL
+  `photo` int(10) NOT NULL,
+  `join_date` date NOT NULL,
+  `following` int(255) NOT NULL,
+  `followers` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
