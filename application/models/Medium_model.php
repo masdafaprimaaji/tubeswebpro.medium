@@ -90,4 +90,11 @@ class Medium_model extends CI_model
 		$data = $this->db->select('*')->from('post')->where('id_post',$id_post)->get();
 		return $data->row_array();
 	}
+
+	public function hapusDataPost($id_post)
+	{
+		//use query builder to delete data based on id 
+		$this->db->where(array ('id_post'=> $id_post));
+		$this->db->delete('post');
+	}
 }
