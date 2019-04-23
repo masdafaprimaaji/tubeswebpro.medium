@@ -172,6 +172,7 @@ class Medium_model extends CI_model
 		else return FALSE;
 	}
 
+	
 	public function editProfile($data,$id_user)
 	{
 		$this->db->where('id_user',$id_user);
