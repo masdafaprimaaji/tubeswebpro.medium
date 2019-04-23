@@ -18,6 +18,7 @@ class Medium_model extends CI_model
 	}
 	
 
+	
 	public function hapusDataPengguna($id_user)
 	{
 		//use query builder to delete data based on id 
