@@ -31,7 +31,6 @@ class Medium_model extends CI_model
 		$data = $this->db->select('*')->from('users')->where('id_user',$id_user)->get();
 		return $data->row_array();
 	}
-	
 
 	public function ubahDataPengguna($id_user)
 	{
