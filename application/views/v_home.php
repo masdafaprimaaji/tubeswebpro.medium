@@ -3,9 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
+	
     <head>
         <link rel="icon" type="image/png" href="<?php echo base_url();?>assets/logo_medium_pure.png">
         <title>Medium - a place to read and write bis ideas and important stories</title>
+		
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -13,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- MY CSS -->
         <link rel="stylesheet" href="<?php echo base_url();?>assets/style.css">
     </head>
+	
     <header>
         <div class="container">
             <div class="row">
