@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container">
             <div class="row">
                 <div class="col-4 logo">
-                    <a href="./">
+                    <a href="http://localhost/medium/Medium/loggedin/<?php echo $user[0]->email;?>">
                         <img class="logo" src="<?php echo base_url();?>assets/logo_medium_pure.png" />
                     </a>
                     Draft
@@ -35,12 +35,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-4">  
                             <ul class="nav nav-pills">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i></a>
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url();?>assets/logo_medium_pure.png" style="border-radius: 50%; width: 30px;"></a>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item" href="#">Become a Member</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">New Story</a>
-                                            <a class="dropdown-item" href="#">Stories</a>
+                                            <a class="dropdown-item" href="http://localhost/medium/Medium/addStory/<?php echo $user[0]->id_user;?>">New Story</a>
+                                            <a class="dropdown-item" href="http://localhost/medium/Medium/story/<?php echo $user[0]->id_user;?>">Stories</a>
                                             <a class="dropdown-item" href="#">Series</a>
                                             <a class="dropdown-item" href="#">Stats</a>
                                             <div class="dropdown-divider"></div>
@@ -50,10 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <a class="dropdown-item" href="#">Publications</a>
                                             <a class="dropdown-item" href="#">Customize your interests</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Profile</a>
+                                            <a class="dropdown-item" href="http://localhost/medium/Medium/profile/<?php echo $user[0]->id_user;?>">Profile</a>
                                             <a class="dropdown-item" href="#">Settings</a>
                                             <a class="dropdown-item" href="#">Help</a>
-                                            <a class="dropdown-item" href="#">Sign out</a>
+                                            <a class="dropdown-item" href="http://localhost/medium/Medium/logout">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -66,17 +66,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </header>
     <body>
         <div class="container">
-            <form class="create-story">
+            <form class="create-story" method="post" action="<?php echo site_url().'/Medium/tambahStory/'.$user[0]->id_user;?>">
                 <div class="form-group borderless">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Title"></textarea>
+                    <input type="file" name="berkas" class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Photo"/>
+                    <input type="submit" value="upload" class="form-control" id="exampleFormControlTextarea1" rows="1"/>
                 </div>
                 <div class="form-group borderless">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Tagline"></textarea>
+                    <textarea class="form-control" name="title" id="exampleFormControlTextarea1" rows="1" placeholder="Title"></textarea>
                 </div>
                 <div class="form-group borderless">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Content"></textarea>
+                    <textarea class="form-control" name="tagline" id="exampleFormControlTextarea1" rows="1" placeholder="Tagline"></textarea>
                 </div>
-                <button type="button" class="btn btn-light">Publish</button>
+                <div class="form-group borderless">
+                    <textarea class="form-control" name="category" id="exampleFormControlTextarea1" rows="1" placeholder="Category"></textarea>
+                </div>
+                <div class="form-group borderless">
+                    <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="5" placeholder="Content"></textarea>
+                </div>
+                <button type="submit" class="btn btn-light">Publish</button>
             </form>
         </div>
     </body>
