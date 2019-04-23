@@ -82,66 +82,58 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row border-bottom">
                 <div class="col-4">
                     <div class="col-12">
-                        <img style="width: inherit" src="<?php echo base_url();?>assets/a.jpg">
+                        <img style="width: inherit" src="<?php echo base_url();?>assets/dummy/post1.jpeg">
                     </div>
                     <div class="col-12 big-post-left">
-                        <a href="">(Judul Post)</a><br>
-                        <a href="">(tagline)</a><br>
-                        <a href="">(author)</a><br>
-                        <a href="">(date)</a> . 
-                        <a href="">(read time)<i class="fa fa-star"></i></a>
+                        <?php 
+                        for ($i=0;$i<1;$i++){
+                            echo "<a href='http://localhost/medium/Medium/detailPostUnlogged/".$post[$i]->id_post."'><h5><b>".$post[$i]->title."</b></h5></a><br>
+                            <a href='http://localhost/medium/Medium/detailPostUnlogged/".$post[$i]->id_post."'>".$post[$i]->tagline."</a><br>
+                            <a href=''><b>".$post[$i]->fullname."</b></a><br>
+                            <a href=''>".$post[$i]->date."</a> . 
+                            <a href=''>".$post[$i]->read_time." min read<i class='fa fa-star'></i></a>";
+                        };
+                    
+                        ?>
+                        
                     </div>
                 </div>
                 <div class="col-4">
                     <div>
                         <div class="row">
-                            <div class="col-4 image-post-middle">
-                                <img src="<?php echo base_url();?>assets/a.jpg">
+                        <?php 
+                        for($i=1;$i<4;$i++){
+                            echo "<div class='col-4 image-post-middle'>
+                                <img src='".base_url()."assets/dummy/post2.jpeg'>
                             </div>
-                            <div class="col-8 isi">
-                                <a href="#">Judul Post</a><br><br>
+                            <div class='col-8 isi'>
+                                <a href='http://localhost/medium/Medium/detailPostUnlogged/".$post[$i]->id_post."'><b>".$post[$i]->title."</b></a><br><br>
                                 <small>
-                                    <a href="#">Author</a> in <a href="#">Category</a><br>
-                                    <a href="#">Aug 8</a> . <a href="#">10 min read<i class="fa fa-star"></i></a>
+                                    <a href='#'><b>".$post[$i]->fullname."</b></a> in <a href='#'><b>".$post[$i]->category."</b></a><br>
+                                    <a href='#'>".$post[$i]->date."</a> . <a href='#'>".$post[$i]->read_time." min read<i class='fa fa-star'></i></a>
                                 </small>
                             </div>
                         </div>
-                        <div class="row" style="padding-top: 15px;">
-                            <div class="col-4 image-post-middle">
-                                <img src="<?php echo base_url();?>assets/a.jpg">
-                            </div>
-                            <div class="col-8 isi">
-                                <a href="#">Judul Post</a><br><br>
-                                <small>
-                                    <a href="#">Author</a> in <a href="#">Category</a><br>
-                                    <a href="#">Aug 8</a> . <a href="#">10 min read<i class="fa fa-star"></i></a>
-                                </small>
-                            </div>
-                        </div>
-                        <div class="row" style="padding-top: 15px; padding-bottom: 20px;">
-                            <div class="col-4 image-post-middle">
-                                <img src="<?php echo base_url();?>assets/a.jpg">
-                            </div>
-                            <div class="col-8 isi">
-                                <a href="#">Judul Post</a><br><br>
-                                <small>
-                                    <a href="#">Author</a> in <a href="#">Category</a><br>
-                                    <a href="#">Aug 8</a> . <a href="#">10 min read<i class="fa fa-star"></i></a>
-                                </small>
-                            </div>
+                        <div class='row' style='padding-top: 15px;'>";
+                        };
+                        ?>
                         </div>                                               
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="col-12">
-                        <img style="width: inherit" src="<?php echo base_url();?>assets/a.jpg">
+                        <img style="width: inherit" src="<?php echo base_url();?>assets/dummy/post5.jpeg">
                     </div>
                     <div class="col-12 big-post-right">
-                        <a href="">(Judul Post)</a><br>
-                        <a href="">(tagline)</a><br>
-                        <a href="">(author)</a><br>
-                        <a href="">(date)</a> . 
-                        <a href="">(read time)<i class="fa fa-star"></i></a>
+                        <?php for ($i=4;$i<5;$i++){
+                        echo "
+                        <a href='http://localhost/medium/Medium/detailPostUnlogged/".$post[$i]->id_post."'><h5><b>".$post[$i]->title."</b></h5></a><br>
+                        <a href='http://localhost/medium/Medium/detailPostUnlogged/".$post[$i]->id_post."'>".$post[$i]->tagline."</a><br>
+                        <a href=''><b>".$post[$i]->fullname."</b></a><br>
+                        <a href=''>".$post[$i]->date."</a> . 
+                        <a href=''>".$post[$i]->read_time." min read<i class='fa fa-star'></i></a>";
+                        };
+                        ?>
                     </div>
                 </div>
             </div>
@@ -413,55 +405,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="row border-bottom" style="padding-bottom: 10px;">
                             Popular on Medium
                         </div>
-
-                        <div class="row sidebar-content">
-                            <div class="col-2 sidebar-number">
-                                01
+                        <?php $i=1;
+                        for ($no=0;$no<4;$no++)
+                        {
+                            echo "<div class='row sidebar-content'>
+                            <div class='col-2 sidebar-number'>".
+                                $i++
+                            ."</div>
+                            <div class='col-10 sidebar-article'>
+                                <a href='http://localhost/medium/Medium/detailPost/".$post[$no]->id_post."'><b>".$post[$no]->title."</b></a><br>
+                                <a href='#'>".$post[$no]->fullname."</a><br>
+                                <a href='#'>".$post[$no]->date."</a> . <a href='#'>".$post[$no]->read_time." min read<i class='fa fa-star'></i></a>                               
                             </div>
-                            <div class="col-10 sidebar-article">
-                                <a href="#">Judul Post</a><br>
-                                <a href="#">(tagline)</a><br>
-                                <a href="#">Author</a><br>
-                                <a href="#">Aug 8</a> . <a href="#">10 min read<i class="fa fa-star"></i></a>                               
-                            </div>
-                        </div>
-                        <div class="row sidebar-content">
-                                <div class="col-2 sidebar-number">
-                                    02
-                                </div>
-                                <div class="col-10 sidebar-article">
-                                    <a href="#">Judul Post</a><br>
-                                    <a href="#">(tagline)</a><br>
-                                    <a href="#">Author</a><br>
-                                    <a href="#">Aug 8</a> . <a href="#">10 min read<i class="fa fa-star"></i></a>                               
-                                </div>
-                            </div>
-
-                        <div class="row sidebar-content">
-                            <div class="col-2 sidebar-number">
-                                03
-                            </div>
-                            <div class="col-10 sidebar-article">
-                                <a href="#">Judul Post</a><br>
-                                <a href="#">(tagline)</a><br>
-                                <a href="#">Author</a><br>
-                                <a href="#">Aug 8</a> . <a href="#">10 min read<i class="fa fa-star"></i></a>                               
-                            </div>
-                        </div>
-
-                        <div class="row sidebar-content border-bottom">
-                                <div class="col-2 sidebar-number">
-                                    04
-                                </div>
-                                <div class="col-10 sidebar-article">
-                                    <a href="#">Judul Post</a><br>
-                                    <a href="#">(tagline)</a><br>
-                                    <a href="#">Author</a><br>
-                                    <a href="#">Aug 8</a> . <a href="#">10 min read<i class="fa fa-star"></i></a>                               
-                                </div>
-                            </div>                        
-                        </div>
-
+                        </div>"
+                            ;
+                        }
+                        ?>
+                        
                         <div class="row sidebar-content">
                             <div class="col-12">
                                 <a href="">Help &nbsp</a>
@@ -478,6 +438,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </div>
-
     </body>
 </html>
