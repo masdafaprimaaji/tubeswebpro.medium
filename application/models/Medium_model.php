@@ -98,12 +98,12 @@ class Medium_model extends CI_model
 
   	public function register_user($table,$data)
   	{
-    	$insert = $this->db->insert($table, $data);
-    	if ($insert){
-      		return TRUE;
-    	} else {
-      		return FALSE;
-    	}
+    		$insert = $this->db->insert($table, $data);
+    		if ($insert){
+      			return TRUE;
+    		} else {
+      			return FALSE;
+    		}
   	}
 
   	public function getPostById($id_post)
