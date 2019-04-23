@@ -13,7 +13,6 @@ class Medium_model extends CI_model
 			"followers" => $this->input->post('followers', true),
 		];
 
-		
 		//use query builder to insert $data to table "users"
 		$this->db->insert('users',$data);
 	}
