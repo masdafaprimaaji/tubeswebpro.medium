@@ -97,4 +97,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
     </body>
-</html><?php echo base_url();?>
+</html>
