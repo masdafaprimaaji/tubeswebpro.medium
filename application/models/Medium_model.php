@@ -2,7 +2,6 @@
 class Medium_model extends CI_model
 {
 	
-	
 	public function tambahDataPengguna()
 	{
 		$data = [
@@ -17,6 +16,7 @@ class Medium_model extends CI_model
 		//use query builder to insert $data to table "users"
 		$this->db->insert('users',$data);
 	}
+	
 
 	public function hapusDataPengguna($id_user)
 	{
@@ -24,6 +24,7 @@ class Medium_model extends CI_model
 		$this->db->where(array ('id_user'=> $id_user));
 		$this->db->delete('users');
 	}
+	
 
 	public function getPenggunaById($id_user)
 	{
@@ -31,6 +32,7 @@ class Medium_model extends CI_model
 		$data = $this->db->select('*')->from('users')->where('id_user',$id_user)->get();
 		return $data->row_array();
 	}
+	
 
 	public function ubahDataPengguna($id_user)
 	{
@@ -43,12 +45,13 @@ class Medium_model extends CI_model
 		$this->db->where('id_user',$id_user);
 		$this->db->update('users',$data);
 	}
+	
 
 	public function cariDataPengguna()
 	{
 		$keyword = $this->input->post('keyword', true);
 		//use query builder class to search data users based on keyword "id_user" 
-        $data = $this->db->like('id_user', $keyword)->get('users');
+        	$data = $this->db->like('id_user', $keyword)->get('users');
 
 		return $data->result_array();
 		//return data users that has been searched
