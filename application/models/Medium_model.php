@@ -1,6 +1,8 @@
 <?php
 class Medium_model extends CI_model
 {
+	
+	
 	public function tambahDataPengguna()
 	{
 		$data = [
