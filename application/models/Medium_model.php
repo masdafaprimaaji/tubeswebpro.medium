@@ -17,8 +17,6 @@ class Medium_model extends CI_model
 		$this->db->insert('users',$data);
 	}
 	
-
-	
 	public function hapusDataPengguna($id_user)
 	{
 		//use query builder to delete data based on id 
