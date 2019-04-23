@@ -41,15 +41,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </center>
                             </div>
                             <div class="col-12">
-                                <form action="" method="post">
+                                <form action="<?php echo site_url().'/Medium/register';?>" method="post">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+                                    <input type="text" class="form-control" name="fullname" id="inputName" placeholder="Your Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <input type="email" class="form-control" name="email" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                    <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
                                 </div>
                                 <center>
                                     <button type="submit" class="btn btn-dark">Continue</button>
