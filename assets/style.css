@@ -1,0 +1,102 @@
+header{
+    margin-top: 25px;
+}
+a{
+    text-decoration: none;
+    color: grey;
+}
+.logo{
+    float: left;
+    width: 140px;
+    padding-left: 40px;
+}
+.kataatas{
+    font-size: 13px;
+}
+.tombolatas{
+    font-size: 13px;
+    width: 100px;
+}
+
+.nav-item a{
+    text-decoration: none; 
+    color: grey;
+    font-size: 12px;
+}
+
+.big-post-left{
+    padding-top: 10px;
+    padding-left: 60px;
+}
+
+.big-post-right{
+    padding-top: 10px;
+}
+
+.image-post-middle img{
+    width: 100px;
+    height: 100px;
+}
+
+.middle-sign-up{
+    width: inherit;
+    height:200px;
+    background: #fcfcfc;
+}
+
+.middle-sign-up img{
+    width: inherit;
+    height: 200px;
+}
+
+.col-10 h1{
+    padding-top: 20px;
+}
+
+.col-10 h5{
+    padding-bottom: 15px;
+    color: grey;
+}
+
+.bottom-content{
+    padding-top: 30px;
+    padding-left: 60px;
+}
+
+.bottom-content a{
+    font-size: 12px;
+    text-decoration: none;
+    color: grey;
+}
+
+.image-post-bottom img{
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+.contain-post-bottom{
+    padding-top: 30px;
+}
+
+.category{
+    padding-top: 50px;
+}
+
+.sidebar-number{
+    color: grey;
+    font-size: 20px;
+}
+
+.nav-item :hover{
+    color: black;
+}
+
+.more a{
+    float: right;
+}
+
+.col-2 i{
+    padding-left: 20px;
+}
+

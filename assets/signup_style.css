@@ -1,0 +1,47 @@
+header{
+    margin-top: 25px;
+    margin-bottom : 50px;
+}
+.logo{
+    float: left;
+    width: 140px;
+    padding-left: 500px;
+}
+
+.logo img{
+    width: 120px;
+    align-content: center;
+}
+
+.gambar-kiri{
+    width: 250px;
+}
+
+.gambar-kanan{
+    width: 230px;
+    float: right;
+}
+
+.welcoming-text{
+    margin-top: 40px;
+}
+
+.card{
+    margin: 7px;
+}
+
+
+a{
+    text-decoration: none;
+    color: grey;
+}
+
+.col-2 img{
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+}
+
+.sign-with{
+    padding-top: 6px;
+}

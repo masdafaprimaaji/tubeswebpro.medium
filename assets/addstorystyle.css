@@ -1,0 +1,30 @@
+header{
+    margin-top: 25px;
+}
+a{
+    text-decoration: none;
+    color: grey;
+}
+.kataatas{
+    font-size: 13px;
+}
+.tombolatas{
+    font-size: 10px;
+    width: 120px;
+}
+
+.nav-item a{
+    text-decoration: none; 
+    color: grey;
+    font-size: 12px;
+}
+
+.logo img{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.create-story{
+    padding-top: 50px;
+}
