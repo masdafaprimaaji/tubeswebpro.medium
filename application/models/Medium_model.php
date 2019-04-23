@@ -57,6 +57,7 @@ class Medium_model extends CI_model
 		//return data users that has been searched
 	}
 
+	
 	public function tambahDataPost($id_user)
 	{
 		$data = [
