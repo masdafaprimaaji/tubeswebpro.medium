@@ -85,15 +85,15 @@ class Medium_model extends CI_model
 
 	public function login_user($email, $password)
 	{
-    	$this->db->where('email',$email);
-    	$this->db->where('password',$password);
+    		$this->db->where('email',$email);
+    		$this->db->where('password',$password);
 
-    	$result = $this->db->get('users');
-    	if($result->num_rows()==1){
-        	return $result->row(0);
-    	}else{
-        	return false;
-    	}
+    		$result = $this->db->get('users');
+    		if($result->num_rows()==1){
+        		return $result->row(0);
+    		}else{
+        		return false;
+    		}
   	}
 
   	public function register_user($table,$data)
